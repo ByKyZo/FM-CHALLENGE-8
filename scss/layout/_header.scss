@@ -1,0 +1,79 @@
+.header {
+    height: 100%;
+    background-image: url(../images/bg-hero-desktop.svg);
+    background-color: #edfbfe;
+    background-repeat: no-repeat;
+    @include spaceAround;
+    &__heading{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 50px;
+        &__logo{ 
+            margin-right: 45px;
+            display: flex;
+            &__img{
+                @media(max-width: 600px){
+                    width: 105px;;
+                }
+            }
+        }
+        &__btn{
+            background-color: white;
+            color: $grayishBlue;
+            padding: 10px 60px;
+            border-radius: 9999px;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+            &:hover{
+                color: #808d9991;
+                transition: 0.3s;
+            }
+            @media(max-width: 600px){
+                padding: 6px 40px;
+                font-size: 0.8rem;
+            }
+        }
+    }
+    &__content{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        @media(max-width : 1321px){
+            justify-content: center;
+        }
+        &__left{
+            width: 485px;
+            margin-bottom: 50px;
+            @media(max-width : 1321px){
+                text-align: center;
+            }
+            &__title{
+                font-size: 2.1rem;
+                margin-bottom: 25px;
+                @media (max-width: 425px){
+                    font-size: 1.8em;
+                }
+            }
+            &__description{
+                color: $veryDarkCyan;
+                font-size: 0.9rem;
+                line-height: 25px;
+                margin-bottom: 45px;
+            }
+            &__btn{
+                @include btn;
+                &:hover{
+                    background-color: #ff52bfa8;
+                    transition: 0.3s;
+                }
+            }
+        }
+        &__right{
+            width: 740px;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}

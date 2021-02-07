@@ -1,0 +1,99 @@
+.footer{
+    background-color: $veryDarkCyan;
+    @include spaceAround;
+    position: relative;
+    &__top{
+        background-color: white;
+        height: 200px;
+        max-width: 700px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        border-radius: 10px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, .2);
+        transform: translateY(-65%);
+        text-align: center;
+        &__btn{
+            @include btn;
+            &:hover{
+                background-color: #ff52bfa8;
+                transition: 0.3s;
+            }
+        }
+    }
+    &__logo{
+        color: white;
+        margin-bottom: 10px;
+    }
+    &__content{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        color: white;
+        font-size: 0.9rem;
+        &__list{
+            width: 400px;
+            margin-bottom: 25px;
+            li{
+                margin-bottom : 10px;
+                cursor: pointer;
+                &:hover{
+                    text-decoration: underline;
+                    transition: 0.2s;
+                }
+            }
+            &__icon-location{
+                list-style-image: url("../images/icon-location.svg");
+                margin-right: 10px;
+            }
+            &__icon-phone{
+                list-style-image: url("../images/icon-phone.svg");
+                margin-right: 10px;
+            }
+            &__icon-mail{
+                list-style-image: url("../images/icon-email.svg");
+                margin-right: 10px;
+            }
+        }
+        &__item{
+            width: 200px;
+        }
+        &__social{
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.2rem;
+            @media (max-width: 696px){
+                margin: 0 auto;
+            }
+            &__icon{
+                width: 0;
+                height: 0;
+                border: 1px solid white;
+                border-radius: 50%;
+                padding: 20px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 1rem;
+                cursor: pointer;
+                &:hover{
+                    color: $pink;
+                    border: 1px solid $pink;
+                    transition: 0.3s;
+                }
+            }
+        }
+    }
+    &__copyright{
+        color: white;
+        position: absolute;
+        right: 10px;
+        font-size: 0.8rem;
+        @media (max-width: 696px){
+            width: 100%;
+            text-align: center;
+        }
+    }
+}
